@@ -29,12 +29,12 @@ class RedditBot:
         """
         with open('already_posted.txt', 'r') as f:
             for line in f:
+                print("Line: ", line)
                 if post_id in line:
                     f.close()
                     return True
-                else:
-                    f.close()
-                    return False
+            f.close()
+            return False
 
     def search(self):
         """
